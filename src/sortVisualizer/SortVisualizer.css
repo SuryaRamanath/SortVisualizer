@@ -1,16 +1,18 @@
 * {
   font-family: "Open Sans", sans-serif;
   font-size: 1em;
+  background-color: black;
 }
 
 .array-container {
   align-items: top;
   display: flex;
+  justify-content: center;
   /* margin-top: auto; */
 }
 
 .array-bar {
-  background-color: blueviolet;
+  background-color: #39FF14;
   border-radius: 0.5em;
   margin: 0.15%;
 }

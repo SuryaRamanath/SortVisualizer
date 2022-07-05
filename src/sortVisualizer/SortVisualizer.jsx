@@ -4,12 +4,12 @@ import { getQuickSortAnimations } from '../algorithms/QuickSort';
 import { getInsertionSortAnimations } from '../algorithms/InsertionSort';
 import { getMergeSortAnimations } from '../algorithms/MergeSort';
 
-const ARR_LEN = 100;
+const ARR_LEN = 200;
 const MIN_NUM = 5;
 const MAX_NUM = 80;
-const DELAY = 5;
-const ACCESSED_COLOUR = 'turquoise';
-const SORTED_COLOUR = 'green';
+const DELAY = 3;
+const ACCESSED_COLOUR = 'red';
+const SORTED_COLOUR = 'purple';
 
 export default function SortVisualizer(props) {
   const [arr, setArr] = useState([]);
@@ -117,7 +117,7 @@ export default function SortVisualizer(props) {
             className="array-bar"
             style={{
               height: `${barHeight}vmin`,
-              width: `${100 / ARR_LEN}vw`,
+              width: `${30 / ARR_LEN}vw`,
             }}
             key={index}
           ></div>
