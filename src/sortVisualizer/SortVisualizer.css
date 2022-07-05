@@ -4,9 +4,9 @@
 }
 
 .array-container {
-  align-items: center;
+  align-items: top;
   display: flex;
-  margin-top: auto;
+  /* margin-top: auto; */
 }
 
 .array-bar {
