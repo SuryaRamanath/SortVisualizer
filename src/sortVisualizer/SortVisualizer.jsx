@@ -5,11 +5,9 @@ import { getInsertionSortAnimations } from '../algorithms/InsertionSort';
 import { getMergeSortAnimations } from '../algorithms/MergeSort';
 
 const ARR_LEN = 200;
-const MIN_NUM = 5;
-const MAX_NUM = 80;
 const DELAY = 3;
 const ACCESSED_COLOUR = 'red';
-const SORTED_COLOUR = 'purple';
+const SORTED_COLOUR = '#c5a8f0';
 
 export default function SortVisualizer(props) {
   const [arr, setArr] = useState([]);
@@ -24,11 +22,13 @@ export default function SortVisualizer(props) {
     if (isSorted) resetArrayColour();
     setIsSorted(false);
     const arr = [];
-    for (let i = 0; i < ARR_LEN; i++) {
-      arr.push((MAX_NUM - MIN_NUM) * (i / ARR_LEN) + MIN_NUM);
-    }
-    shuffle(arr);
-    setArr(arr);
+    
+      
+      for(let i=0;i<ARR_LEN;i++){
+        arr.push(Math.floor(Math.random()*(60)+5));
+      }
+      setArr(arr)
+    
   }
 
   function mergeSort() {
@@ -151,11 +151,4 @@ export default function SortVisualizer(props) {
   );
 }
 
-const shuffle = (arr) => {
-  for (let i = arr.length - 1; i >= 0; i--) {
-    const randomIndex = Math.floor(Math.random() * (i + 1));
-    const temp = arr[i];
-    arr[i] = arr[randomIndex];
-    arr[randomIndex] = temp;
-  }
-};
+

@@ -1,7 +1,7 @@
 * {
   font-family: "Open Sans", sans-serif;
   font-size: 1em;
-  background-color: black;
+ 
 }
 
 .array-container {
@@ -9,6 +9,7 @@
   display: flex;
   justify-content: center;
   /* margin-top: auto; */
+  
 }
 
 .array-bar {
@@ -53,6 +54,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: black;
 }
 
 @media (min-width: 700px) {
