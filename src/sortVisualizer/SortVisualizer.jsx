@@ -5,7 +5,7 @@ import { getInsertionSortAnimations } from '../algorithms/InsertionSort';
 import { getMergeSortAnimations } from '../algorithms/MergeSort';
 import { getBubbleSortAnimations } from '../algorithms/BubbleSort';
 import { getSelectionSortAnimations } from '../algorithms/SelectionSort';
-
+import { getCountSortAnimations } from '../algorithms/CountSort';
 
 const ARR_LEN = 150;
 const DELAY = 3;
@@ -56,6 +56,10 @@ export default function SortVisualizer(props) {
 
   function quickSort() {
     const animations = getQuickSortAnimations(arr);
+    animateArrayUpdate(animations);
+  }
+  function countSort() {
+    const animations = getCountSortAnimations(arr);
     animateArrayUpdate(animations);
   }
 
@@ -166,6 +170,11 @@ export default function SortVisualizer(props) {
           <li>
             <button className="app-button" onClick={selectionSort}>
               Selection sort
+            </button>
+          </li>
+          <li>
+            <button className="app-button" onClick={countSort}>
+              Count sort
             </button>
           </li>
         </ul>
