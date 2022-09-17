@@ -7,7 +7,7 @@ import { getBubbleSortAnimations } from '../algorithms/BubbleSort';
 import { getSelectionSortAnimations } from '../algorithms/SelectionSort';
 
 
-const ARR_LEN = 200;
+const ARR_LEN = 150;
 const DELAY = 3;
 const ACCESSED_COLOUR = 'red';
 const SORTED_COLOUR = '#c5a8f0';
