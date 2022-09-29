@@ -6,11 +6,11 @@ import { getMergeSortAnimations } from '../algorithms/MergeSort';
 import { getBubbleSortAnimations } from '../algorithms/BubbleSort';
 import { getSelectionSortAnimations } from '../algorithms/SelectionSort';
 import { getCountSortAnimations } from '../algorithms/CountSort';
-
+import { getHeapSortAnimations } from '../algorithms/HeapSort';
 const ARR_LEN = 150;
 const DELAY = 3;
 const ACCESSED_COLOUR = 'red';
-const SORTED_COLOUR = '#c5a8f0';
+const SORTED_COLOUR = '#ef18f2';
 
 export default function SortVisualizer(props) {
   const [arr, setArr] = useState([]);
@@ -41,6 +41,10 @@ export default function SortVisualizer(props) {
   function selectionSort(){
     const animations =getSelectionSortAnimations(arr);
     animateArrayUpdate(animations)
+  }
+  function heapSort(){
+    const animations =getHeapSortAnimations(arr);
+    animateArrayUpdate(animations);
   }
 
   function mergeSort() {
@@ -175,6 +179,11 @@ export default function SortVisualizer(props) {
           <li>
             <button className="app-button" onClick={countSort}>
               Count sort
+            </button>
+          </li>
+          <li>
+            <button className="app-button" onClick={heapSort}>
+              Heap Sort
             </button>
           </li>
         </ul>
